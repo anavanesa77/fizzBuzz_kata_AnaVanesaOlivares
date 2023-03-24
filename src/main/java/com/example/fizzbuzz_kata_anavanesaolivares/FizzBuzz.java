@@ -8,10 +8,10 @@ public class FizzBuzz {
 
     private static void executable(){
         for (int i = 0; i <= 100; i++) {
-            System.out.println(modifyValue(i));
+            System.out.println(execute(i));
         }
     }
-    public static String modifyValue (int number) {
+    public static String execute(int number) {
         if ((number % 3 == 0) & (number % 5 == 0)) {
             return "fizzBuzz";
         }

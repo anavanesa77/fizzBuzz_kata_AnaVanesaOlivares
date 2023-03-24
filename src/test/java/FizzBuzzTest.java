@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-class FizzBuzzTest {
+class fizzBuzzShould {
 
     /* 1-1
      *  3-fizz
@@ -12,30 +12,30 @@ class FizzBuzzTest {
      */
 
     @Test
-    public void shows_same_number_when_it_is_not_divisible_by_three_and_five(){
+    public void print_same_number_when_it_is_not_divisible_by_three_and_five(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String number = fizzBuzz.modifyValue(2);
-        Assertions.assertEquals("2",number);
+        String number = fizzBuzz.execute(2);
+        Assertions.assertEquals("2", number);
     }
 
     @Test
-    public void number_divisible_by_three_is_printed_fizz(){
+    public void print_fizz_when_it_is_divisible_by_three(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String number = fizzBuzz.modifyValue(3);
+        String number = fizzBuzz.execute(3);
         Assertions.assertEquals("fizz",number);
     }
 
     @Test
-    public void number_divisible_by_five_is_printed_buzz(){
+    public void print_buzz_when_it_is_divisible_by_five(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String number = fizzBuzz.modifyValue(5);
+        String number = fizzBuzz.execute(5);
         Assertions.assertEquals("buzz",number);
     }
 
     @Test
-    public void number_divisible_by_five_and_three_is_printed_fizzBuzz(){
+    public void print_fizzBuzz_when_it_is_divisible_by_three_and_five(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String number = fizzBuzz.modifyValue(15);
+        String number = fizzBuzz.execute(15);
         Assertions.assertEquals("fizzBuzz",number);
     }
 }
