@@ -1,4 +1,4 @@
-package com.example.fizzbuzz_kata_anavanesaolivares;
+package com.example;
 
 import java.util.ArrayList;
 import java.util.List;

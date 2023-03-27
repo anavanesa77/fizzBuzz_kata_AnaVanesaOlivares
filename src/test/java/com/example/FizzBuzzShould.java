@@ -1,6 +1,6 @@
-package com.example.fizzbuzz_kata_anavanesaolivares;
+package com.example;
 
-import com.example.fizzbuzz_kata_anavanesaolivares.FizzBuzz;
+import com.example.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
