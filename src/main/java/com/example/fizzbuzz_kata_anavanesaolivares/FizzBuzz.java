@@ -19,24 +19,19 @@ public class FizzBuzz {
 
     public static String convertNumbersToWord(int number) {
 
-        if (multipleOfFive(number) & multipleOfThree(number)) {
+        if (multipleOfFive(number) & multipleOfThree(number) || containZero(String.valueOf(number))) {
             return "fizzBuzz";
         }
-        if (containThree(String.valueOf(number))) {
+        if (containThree(String.valueOf(number)) || multipleOfThree(number)) {
             return "fizz";
         }
-        if (containFive(String.valueOf((number)))) {
-            return "buzz";
-        }
-        if (multipleOfThree(number)) {
-            return "fizz";
-        }
-        if (multipleOfFive(number)) {
+        if (containFive(String.valueOf((number))) || multipleOfFive(number)) {
             return "buzz";
         }
 
         return String.valueOf(number);
     }
+
 
     private static boolean multipleOfThree(int number) {
         boolean operation = number % 3 == 0;
@@ -55,6 +50,11 @@ public class FizzBuzz {
 
     private static boolean containFive(String number) {
         boolean operation = number.contains("5");
+        return operation;
+    }
+
+    private static boolean containZero(String number) {
+        boolean operation = number.contains("0");
         return operation;
     }
 
