@@ -9,6 +9,7 @@ class fizzBuzzShould {
      *  3-fizz
      *  5-buzz
      *  15-fizzBuzz
+     *  35
      */
 
     @Test
@@ -37,5 +38,12 @@ class fizzBuzzShould {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String number = fizzBuzz.execute(15);
         Assertions.assertEquals("fizzBuzz",number);
+    }
+
+    @Test
+    public void print_fizz_or_buzz_if_number_contains_3_or_5(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String number = fizzBuzz.execute(83);
+        Assertions.assertEquals("fizz", number);
     }
 }
