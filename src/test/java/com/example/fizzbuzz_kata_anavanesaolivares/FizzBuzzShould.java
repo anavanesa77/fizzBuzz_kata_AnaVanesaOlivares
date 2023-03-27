@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class fizzBuzzShould {
 
-    /* 1-1
+    /*  1-1
      *  3-fizz
      *  5-buzz
      *  15-fizzBuzz
