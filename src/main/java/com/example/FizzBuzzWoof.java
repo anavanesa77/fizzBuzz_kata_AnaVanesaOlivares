@@ -19,25 +19,53 @@ public class FizzBuzzWoof {
 
     public static String convertNumbersToWord(int number) {
         boolean multipleOfThree = number % 3 == 0;
+        boolean multipleOfFive = number % 5 == 0;
+        boolean multipleOfSeven = number % 7 == 0;
         String message = "";
 
-        if (containThree(String.valueOf(number))) {
-            message += "Fizz";
-        }
         if (multipleOfThree) {
             message += "Fizz";
         }
-        if (!containThree(String.valueOf(number)) & !multipleOfThree) {
+        if (multipleOfFive) {
+            message += "Buzz";
+        }
+        if (multipleOfSeven) {
+            message += "Woof";
+        }
+        if (containThree(String.valueOf(number))) {
+            message += "Fizz";
+        }
+        if (containFive(String.valueOf(number))) {
+            message += "Buzz";
+        }
+        if (containSeven(String.valueOf(number))) {
+            message += "Woof";
+        }
+        if (!multipleOfThree & !multipleOfFive & !multipleOfSeven & !containFive(String.valueOf(number)) & !containThree(String.valueOf(number)) & !containSeven(String.valueOf(number))) {
             return String.valueOf(number);
         }
         return message + ("(") + number + (")");
 
     }
 
+
     private static boolean containThree(String number) {
         boolean operation = number.contains("3");
         return operation;
     }
 
+    private static boolean containFive(String number) {
+        boolean operation = number.contains("5");
+        return operation;
+    }
+
+    private static boolean containSeven(String number) {
+        boolean operation = number.contains("7");
+        return operation;
+    }
+
+
 }
+
+
 
