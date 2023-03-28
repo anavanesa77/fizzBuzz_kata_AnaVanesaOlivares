@@ -10,7 +10,7 @@ public class FizzBuzzWoof {
     }
 
     public static String convertNumbersToWord(int number){
-        return "s";
+        return "Fizz";
     }
 
 }
