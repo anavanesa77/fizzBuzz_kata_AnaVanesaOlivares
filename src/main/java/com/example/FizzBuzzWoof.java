@@ -18,12 +18,16 @@ public class FizzBuzzWoof {
     }
 
     public static String convertNumbersToWord(int number) {
+        boolean multipleOfThree = number % 3 == 0;
         String message = "";
 
         if (containThree(String.valueOf(number))) {
             message += "Fizz";
         }
-        if (!containThree(String.valueOf(number))) {
+        if (multipleOfThree) {
+            message += "Fizz";
+        }
+        if (!containThree(String.valueOf(number)) & !multipleOfThree) {
             return String.valueOf(number);
         }
         return message + ("(") + number + (")");

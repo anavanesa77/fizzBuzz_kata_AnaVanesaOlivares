@@ -16,7 +16,7 @@ class FizzBuzzWoofShould {
     public void print_fizz_when_the_number_is_three() {
         FizzBuzzWoof fizzBuzzWoof = new FizzBuzzWoof();
         String number = fizzBuzzWoof.convertNumbersToWord(3);
-        Assertions.assertEquals("Fizz(3)", number);
+        Assertions.assertEquals("FizzFizz(3)", number);
     }
 
     @Test
