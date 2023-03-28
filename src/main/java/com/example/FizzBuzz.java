@@ -18,33 +18,29 @@ public class FizzBuzz {
     }
 
     public static String convertNumbersToWord(int number) {
+        boolean multipleOfThree = number % 3 == 0;
+        boolean multipleOfFive = number % 5 == 0;
+        String message = "";
 
-        if (multipleOfNumber(number)) {
-            return "fizzBuzz";
+        if (multipleOfThree) {
+            message += "Fizz";
         }
-        if (!(multipleOfNumber(number)) & containZero(String.valueOf(number))){
-            return "fizzBuzz";
+        if (multipleOfFive) {
+            message += "Buzz";
         }
-        if (containThree(String.valueOf(number)) || multipleOfThree(number)) {
-            return "fizz";
+        if (containThree(String.valueOf(number))) {
+            message += "Fizz";
         }
-        if (containFive(String.valueOf((number))) || multipleOfFive(number)) {
-            return "buzz";
+        if (containFive(String.valueOf(number))) {
+            message += "Buzz";
         }
+        if (!multipleOfThree & !multipleOfFive & !containFive(String.valueOf(number)) & !containThree(String.valueOf(number))) {
+            return String.valueOf(number);
+        }
+        return message + ("(") + number + (")");
 
-        return String.valueOf(number);
     }
 
-
-    private static boolean multipleOfThree(int number) {
-        boolean operation = number % 3 == 0;
-        return operation;
-    }
-
-    private static boolean multipleOfFive(int number) {
-        boolean operation = number % 5 == 0;
-        return operation;
-    }
 
     private static boolean containThree(String number) {
         boolean operation = number.contains("3");
@@ -56,15 +52,6 @@ public class FizzBuzz {
         return operation;
     }
 
-    private static boolean containZero(String number) {
-        boolean operation = number.contains("0");
-        return operation;
-    }
-
-    private static boolean multipleOfNumber(int number){
-        boolean operation = (multipleOfFive(number) & multipleOfThree(number));
-        return operation;
-    }
 
 }
 

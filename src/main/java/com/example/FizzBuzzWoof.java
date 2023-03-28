@@ -19,11 +19,8 @@ public class FizzBuzzWoof {
 
     public static String convertNumbersToWord(int number) {
 
-        if (containThree(String.valueOf(number))) {
-            return "Fizz";
-        }
-        if (multipleOfThree(number)) {
-            return "Fizz";
+        if (containThree(String.valueOf(number)) || (multipleOfThree(number))) {
+            return "Fizz" + " Fizz";
         }
         return String.valueOf(number);
     }
