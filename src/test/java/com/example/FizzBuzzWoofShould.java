@@ -20,7 +20,7 @@ class FizzBuzzWoofShould {
     }
 
     @Test
-    public void (){
+    public void print_fizz_if_contain_five (){
         FizzBuzzWoof fizzBuzzWoof = new FizzBuzzWoof();
         String number = fizzBuzzWoof.convertNumbersToWord(53);
         Assertions.assertEquals("FizzFizz(53)", number);
