@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 
 class FizzBuzzWoofShould {
 
-    /*  3-Fizz
-     *  5-Buzz
-     *  7-Woof
-     *  3-Fizz Fizz
+    /*  3(igual, contener, divisible)->Fizz
+     *  5(igual, contener, divisible)->Buzz
+     *  7(igual, contener, divisible)->Woof
+     *  33(contiene, divisible)->FizzFizz
      */
 
     @Test
-    public void print_fizz_when_it_is_divisible_and_contains_three() {
+    public void print_fizz_when_the_number_is_same() {
         FizzBuzzWoof fizzBuzzWoof = new FizzBuzzWoof();
         String number = fizzBuzzWoof.convertNumbersToWord(3);
         Assertions.assertEquals("Fizz", number);
