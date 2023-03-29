@@ -17,53 +17,39 @@ public class FizzBuzzWoof {
         System.out.println(listNumber);
     }
 
-    public static String convertNumbersToWord(int number) {
-        boolean multipleOfThree = number % 3 == 0;
-        boolean multipleOfFive = number % 5 == 0;
-        boolean multipleOfSeven = number % 7 == 0;
+    public static String convertNumbersToWord(int chainNumber) {
         String message = "";
 
-        if (multipleOfThree) {
+        if (calculateMultiple(chainNumber, 3)) {
             message += "Fizz";
         }
-        if (multipleOfFive) {
+        if (calculateMultiple(chainNumber, 5)) {
             message += "Buzz";
         }
-        if (multipleOfSeven) {
+        if (calculateMultiple(chainNumber, 7)) {
             message += "Woof";
         }
-        if (containThree(String.valueOf(number))) {
+        if (containNumber(String.valueOf(chainNumber), String.valueOf(3))) {
             message += "Fizz";
         }
-        if (containFive(String.valueOf(number))) {
+        if (containNumber(String.valueOf(chainNumber), String.valueOf(5))) {
             message += "Buzz";
         }
-        if (containSeven(String.valueOf(number))) {
+        if (containNumber(String.valueOf(chainNumber), String.valueOf(7))) {
             message += "Woof";
         }
-        if (!multipleOfThree & !multipleOfFive & !multipleOfSeven & !containFive(String.valueOf(number)) & !containThree(String.valueOf(number)) & !containSeven(String.valueOf(number))) {
-            return String.valueOf(number);
-        }
-        return message + ("(") + number + (")");
-
+        return message + ("(") + chainNumber + (")");
     }
 
+    private static boolean calculateMultiple(int chainNumber, int multipleNumber) {
+        boolean multipleOfNumber = chainNumber % multipleNumber == 0;
+        return multipleOfNumber;
+    }
 
-    private static boolean containThree(String number) {
-        boolean operation = number.contains("3");
+    private static boolean containNumber(String chainNumber, String containsThisNumber) {
+        boolean operation = chainNumber.contains(containsThisNumber);
         return operation;
     }
-
-    private static boolean containFive(String number) {
-        boolean operation = number.contains("5");
-        return operation;
-    }
-
-    private static boolean containSeven(String number) {
-        boolean operation = number.contains("7");
-        return operation;
-    }
-
 
 }
 

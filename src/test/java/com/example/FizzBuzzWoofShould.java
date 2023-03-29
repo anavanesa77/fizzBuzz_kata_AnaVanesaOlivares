@@ -1,16 +1,9 @@
 package com.example;
 
-import com.example.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class FizzBuzzWoofShould {
-
-    /*  3(igual, contener, divisible)->Fizz
-     *  5(igual, contener, divisible)->Buzz
-     *  7(igual, contener, divisible)->Woof
-     *  33(contiene, divisible)->FizzFizz
-     */
 
     @Test
     public void print_FizzFizz_when_the_number_is_three() {
@@ -32,6 +25,7 @@ class FizzBuzzWoofShould {
         String number = fizzBuzzWoof.convertNumbersToWord(33);
         Assertions.assertEquals("FizzFizz(33)", number);
     }
+
     @Test
     public void print_BuzzBuzz_when_the_number_is_five() {
         FizzBuzzWoof fizzBuzzWoof = new FizzBuzzWoof();
