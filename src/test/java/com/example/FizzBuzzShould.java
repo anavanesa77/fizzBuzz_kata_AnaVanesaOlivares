@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -17,28 +18,28 @@ class fizzBuzzShould {
     public void print_Fizz_when_it_is_divisible_by_three() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String number = fizzBuzz.convertNumbersToWord(6);
-        Assertions.assertEquals("Fizz(6)", number);
+        Assertions.assertEquals("Fizz", number);
     }
 
     @Test
     public void print_Buzz_when_it_is_divisible_by_five() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String number = fizzBuzz.convertNumbersToWord(10);
-        Assertions.assertEquals("Buzz(10)", number);
+        Assertions.assertEquals("Buzz", number);
     }
 
     @Test
     public void print_Fizz_when_contain_three() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String number = fizzBuzz.convertNumbersToWord(13);
-        Assertions.assertEquals("Fizz(13)", number);
+        Assertions.assertEquals("Fizz", number);
     }
 
     @Test
     public void print_Buzz_when_contain_five() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String number = fizzBuzz.convertNumbersToWord(52);
-        Assertions.assertEquals("Buzz(52)", number);
+        Assertions.assertEquals("Buzz", number);
     }
 
 }

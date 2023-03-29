@@ -37,7 +37,7 @@ public class FizzBuzz {
         if (!multipleOfThree & !multipleOfFive & !containFive(String.valueOf(number)) & !containThree(String.valueOf(number))) {
             return String.valueOf(number);
         }
-        return message + ("(") + number + (")");
+        return message;
 
     }
 
