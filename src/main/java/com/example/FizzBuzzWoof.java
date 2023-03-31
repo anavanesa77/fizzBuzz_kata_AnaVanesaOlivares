@@ -17,38 +17,33 @@ public class FizzBuzzWoof {
         System.out.println(listNumber);
     }
 
-    public static String convertNumbersToWord(int chainNumber) {
+    public static String convertNumbersToWord(int number) {
         String message = "";
 
-        if (calculateMultiple(chainNumber, 3)) {
+        if (checkIfIsMultiple(number, 3)) {
             message += "Fizz";
         }
-        if (calculateMultiple(chainNumber, 5)) {
+        if (checkIfIsMultiple(number, 5)) {
             message += "Buzz";
         }
-        if (calculateMultiple(chainNumber, 7)) {
+        if (checkIfIsMultiple(number, 7)) {
             message += "Woof";
         }
-        if (containNumber(String.valueOf(chainNumber), String.valueOf(3))) {
+        final String numberAsText = String.valueOf(number);
+        if (numberAsText.contains("3")){
             message += "Fizz";
         }
-        if (containNumber(String.valueOf(chainNumber), String.valueOf(5))) {
+        if (numberAsText.contains("5")) {
             message += "Buzz";
         }
-        if (containNumber(String.valueOf(chainNumber), String.valueOf(7))) {
+        if (numberAsText.contains("7")) {
             message += "Woof";
         }
-        return message + ("(") + chainNumber + (")");
+        return "%s(%s)".formatted(message,numberAsText);
     }
 
-    private static boolean calculateMultiple(int chainNumber, int multipleNumber) {
-        boolean multipleOfNumber = chainNumber % multipleNumber == 0;
-        return multipleOfNumber;
-    }
-
-    private static boolean containNumber(String chainNumber, String containsThisNumber) {
-        boolean operation = chainNumber.contains(containsThisNumber);
-        return operation;
+    private static boolean checkIfIsMultiple(int chainNumber, int multipleNumber) {
+        return chainNumber % multipleNumber == 0;
     }
 
 }
